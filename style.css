@@ -30,12 +30,10 @@ body{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
+    animation: move-bg 4s linear infinite;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .slogan {
-      animation: move-bg 4s linear infinite;
-    }
     @keyframes move-bg {
       to {
         background-position: 300% 0;
