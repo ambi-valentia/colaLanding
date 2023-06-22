@@ -1,29 +1,32 @@
+@mixin display($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  @include display(center, center);
   font-size: 26px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.container {
-  max-width: auto;
-  margin: 0 auto;
+  .container {
+    min-width: 100%;
+  }
 }
 .header {
   background: whitesmoke;
-  display: flex;
-  justify-content: space-between;
+  @include display(space-between, center);
+  width: 100%;
 }
+
 .slogan {
   text-align: right;
-}
-.slogan {
   background-color: #ff8181;
   cursor: pointer;
   padding: 10px;
@@ -44,68 +47,79 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
 
-.slogan:hover {
-  animation: move-bg 4s linear infinite;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes move-bg {
-    to {
-      background-position: 300% 0;
+  &:hover {
+    animation: move-bg 4s linear infinite;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes move-bg {
+      to {
+        background-position: 300% 0;
+      }
     }
   }
 }
 
 .logo-container {
   margin: 25px 25px 25px 25px;
-}
-.logo-container img {
-  max-height: 80px;
+  img {
+    max-height: 80px;
+  }
 }
 .content {
   margin-top: 0;
   overflow: auto;
-}
-.content img {
-  float: left;
-  margin-right: 10px;
-  width: 60%;
-}
-.content p {
-  text-align: left;
-  padding: 30px;
-}
-.content h1 {
-  margin-top: 200px;
-  text-align: left;
-  margin-right: 30px;
+
+  img {
+    float: left;
+    margin-right: 10px;
+    margin-top: 3%;
+    width: 60%;
+    height: auto;
+  }
+
+  p {
+    text-align: left;
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  h1 {
+    max-width: 100%;
+    height: auto;
+    margin-top: 5%;
+    text-align: left;
+    margin-right: 30px;
+  }
 }
 .advantages {
   text-align: center;
+  article {
+    @include display(center, center);
+    button {
+      display: inline-flex;
+      justify-content: center;
+      cursor: pointer;
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      font-size: 32px;
+      border: 20px none;
+      padding: 50px;
+      border-radius: 100px;
+      margin: 30px;
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
 }
-.advantages article {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.advantages article div {
-  cursor: pointer;
-  background-color: rgb(255, 0, 0);
-  color: white;
-  font-weight: bold;
-  font-size: 32px;
-  border: 20px none;
-  padding: 50px;
-  border-radius: 100px;
-  margin: 30px;
-}
+
 footer {
   padding: 20px;
   background-color: rgb(251, 230, 230);
   font-size: 16px;
-}
-footer h1 {
-  color: red;
+  h1 {
+    color: red;
+  }
 }
