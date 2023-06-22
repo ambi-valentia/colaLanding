@@ -1,101 +1,111 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-body{
+body {
   min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-    font-size:26px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 26px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.container{
-    max-width:auto;
-    margin: 0 auto;
+.container {
+  max-width: auto;
+  margin: 0 auto;
 }
-.header{
-    background: whitesmoke;
-    display:flex;
-    justify-content: space-between;
+.header {
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-between;
 }
-.slogan{
-    text-align: right;
+.slogan {
+  text-align: right;
 }
-.slogan{
-    background-color: #ff8181;
-    cursor: pointer;
-    padding: 10px;
-    margin:25px 25px 25px 25px;
-    background: linear-gradient(45deg, #f7f3ed, #a2befd, #ff8181, #f9c17b, #fba5a7, #f7f3ed) 0 0 / 300% 100%;
-    color:transparent;
-    background-repeat: repeat;
+.slogan {
+  background-color: #ff8181;
+  cursor: pointer;
+  padding: 10px;
+  margin: 25px 25px 25px 25px;
+  background: linear-gradient(
+      45deg,
+      #f7f3ed,
+      #a2befd,
+      #ff8181,
+      #f9c17b,
+      #fba5a7,
+      #f7f3ed
+    )
+    0 0 / 300% 100%;
+  color: transparent;
+  background-repeat: repeat;
 
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.slogan:hover {animation: move-bg 4s linear infinite;}
+.slogan:hover {
+  animation: move-bg 4s linear infinite;
+}
 
 @media (prefers-reduced-motion: no-preference) {
-    @keyframes move-bg {
-      to {
-        background-position: 300% 0;
-      }
+  @keyframes move-bg {
+    to {
+      background-position: 300% 0;
     }
+  }
 }
 
-.logo-container{
-    margin:25px 25px 25px 25px;
+.logo-container {
+  margin: 25px 25px 25px 25px;
 }
-.logo-container img{
-    max-height: 80px;
+.logo-container img {
+  max-height: 80px;
 }
-.content{
-    margin-top:0;
-    overflow: auto;
+.content {
+  margin-top: 0;
+  overflow: auto;
 }
-.content img{
-    float: left;
-    margin-right: 10px;
-    width:60%;
+.content img {
+  float: left;
+  margin-right: 10px;
+  width: 60%;
 }
-.content p{
-    text-align:left;
-    padding: 30px;
+.content p {
+  text-align: left;
+  padding: 30px;
 }
-.content h1{
-    margin-top: 200px;
-    text-align:left;
-    margin-right: 30px;
+.content h1 {
+  margin-top: 200px;
+  text-align: left;
+  margin-right: 30px;
 }
-.advantages{
-    text-align: center;
+.advantages {
+  text-align: center;
 }
-.advantages article{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.advantages article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.advantages article div{
-    cursor:pointer;
-    background-color: rgb(255, 0, 0);
-    color: white;
-    font-weight: bold;
-    font-size: 32px;
-    border: 20px none;
-    padding:50px;
-    border-radius: 100px;
-    margin: 30px;
+.advantages article div {
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+  border: 20px none;
+  padding: 50px;
+  border-radius: 100px;
+  margin: 30px;
 }
-footer{
-    padding: 20px;
-    background-color:rgb(251, 230, 230);
-    font-size:16px;
+footer {
+  padding: 20px;
+  background-color: rgb(251, 230, 230);
+  font-size: 16px;
 }
-footer h1{
-color:red;
+footer h1 {
+  color: red;
 }
