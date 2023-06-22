@@ -33,7 +33,16 @@ header .slogan {
   cursor: pointer;
   padding: 10px;
   margin: 25px 25px 25px 25px;
-  background: linear-gradient(45deg, #f7f3ed, #a2befd, #ff8181, #f9c17b, #fba5a7, #f7f3ed) 0 0/300% 100%;
+  background: linear-gradient(
+      45deg,
+      #f7f3ed,
+      #a2befd,
+      #ff8181,
+      #f9c17b,
+      #fba5a7,
+      #f7f3ed
+    )
+    0 0/300% 100%;
   color: transparent;
   background-repeat: repeat;
   background-clip: text;
@@ -107,4 +116,4 @@ footer {
 }
 footer h1 {
   color: red;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
