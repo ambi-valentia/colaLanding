@@ -12,60 +12,60 @@
 
 body {
   min-height: 100vh;
-  @include display(center, center);
-  font-size: 26px;
+  font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   .container {
     min-width: 100%;
   }
 }
-.header {
+header {
   background: whitesmoke;
   @include display(space-between, center);
-  width: 100%;
-}
-
-.slogan {
-  text-align: right;
-  background-color: #ff8181;
-  cursor: pointer;
-  padding: 10px;
-  margin: 25px 25px 25px 25px;
-  background: linear-gradient(
-      45deg,
-      #f7f3ed,
-      #a2befd,
-      #ff8181,
-      #f9c17b,
-      #fba5a7,
-      #f7f3ed
-    )
-    0 0 / 300% 100%;
-  color: transparent;
-  background-repeat: repeat;
-
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  &:hover {
-    animation: move-bg 4s linear infinite;
+  max-height: 10vh;
+  .logo-container {
+    //max-height: 80%;
+    margin: 25px 25px 25px 25px;
+    img {
+      max-height: 70px;
+    }
   }
-  @media (prefers-reduced-motion: no-preference) {
-    @keyframes move-bg {
-      to {
-        background-position: 300% 0;
+  .slogan {
+    max-height: 10vh;
+    text-align: right;
+    background-color: #ff8181;
+    cursor: pointer;
+    padding: 10px;
+    margin: 25px 25px 25px 25px;
+    background: linear-gradient(
+        45deg,
+        #f7f3ed,
+        #a2befd,
+        #ff8181,
+        #f9c17b,
+        #fba5a7,
+        #f7f3ed
+      )
+      0 0 / 300% 100%;
+    color: transparent;
+    background-repeat: repeat;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:hover {
+      animation: move-bg 4s linear infinite;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes move-bg {
+        to {
+          background-position: 300% 0;
+        }
       }
     }
   }
 }
 
-.logo-container {
-  margin: 25px 25px 25px 25px;
-  img {
-    max-height: 80px;
-  }
-}
 .content {
   margin-top: 0;
   overflow: auto;
@@ -73,20 +73,18 @@ body {
   img {
     float: left;
     margin-right: 10px;
-    margin-top: 3%;
     width: 60%;
-    height: auto;
   }
 
   p {
     text-align: left;
-    padding: 30px;
+    margin: 30px;
     max-width: 90%;
   }
 
   h1 {
+    font-size: 40px;
     max-width: 100%;
-    height: auto;
     margin-top: 5%;
     text-align: left;
     margin-right: 30px;
@@ -94,6 +92,8 @@ body {
 }
 .advantages {
   text-align: center;
+  display: flex;
+  flex-basis: 100%;
   article {
     @include display(center, center);
     button {
@@ -103,9 +103,9 @@ body {
       background-color: red;
       color: white;
       font-weight: bold;
-      font-size: 32px;
+      font-size: 22px;
       border: 20px none;
-      padding: 50px;
+      padding: 35px;
       border-radius: 100px;
       margin: 30px;
       &:hover {

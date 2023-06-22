@@ -6,25 +6,28 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 26px;
+  font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body .container {
   min-width: 100%;
 }
 
-.header {
+header {
   background: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  max-height: 10vh;
 }
-
-.slogan {
+header .logo-container {
+  margin: 25px 25px 25px 25px;
+}
+header .logo-container img {
+  max-height: 70px;
+}
+header .slogan {
+  max-height: 10vh;
   text-align: right;
   background-color: #ff8181;
   cursor: pointer;
@@ -37,7 +40,7 @@ body .container {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.slogan:hover {
+header .slogan:hover {
   animation: move-bg 4s linear infinite;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -48,13 +51,6 @@ body .container {
   }
 }
 
-.logo-container {
-  margin: 25px 25px 25px 25px;
-}
-.logo-container img {
-  max-height: 80px;
-}
-
 .content {
   margin-top: 0;
   overflow: auto;
@@ -62,18 +58,16 @@ body .container {
 .content img {
   float: left;
   margin-right: 10px;
-  margin-top: 3%;
   width: 60%;
-  height: auto;
 }
 .content p {
   text-align: left;
-  padding: 30px;
+  margin: 30px;
   max-width: 90%;
 }
 .content h1 {
+  font-size: 40px;
   max-width: 100%;
-  height: auto;
   margin-top: 5%;
   text-align: left;
   margin-right: 30px;
@@ -81,6 +75,8 @@ body .container {
 
 .advantages {
   text-align: center;
+  display: flex;
+  flex-basis: 100%;
 }
 .advantages article {
   display: flex;
@@ -94,9 +90,9 @@ body .container {
   background-color: red;
   color: white;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 22px;
   border: 20px none;
-  padding: 50px;
+  padding: 35px;
   border-radius: 100px;
   margin: 30px;
 }
