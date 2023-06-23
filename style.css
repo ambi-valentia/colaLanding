@@ -117,4 +117,12 @@ footer {
 }
 footer h1 {
   color: red;
+}
+footer .contacts .details {
+  display: flex;
+  align-items: center;
+}
+footer .contacts .details img {
+  margin: 10px;
+  max-height: 5vh;
 } /*# sourceMappingURL=style.css.map */

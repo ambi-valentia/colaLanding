@@ -123,4 +123,14 @@ footer {
   h1 {
     color: red;
   }
+  .contacts {
+    .details {
+      display: flex;
+      align-items: center;
+      img {
+        margin: 10px;
+        max-height: 5vh;
+      }
+    }
+  }
 }
